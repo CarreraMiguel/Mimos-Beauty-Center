@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mimos';
+  title = 'Mimos Beauty Center';
+
+  isDropdownVisible: boolean = false;
+
+  showDropdown() {
+    this.isDropdownVisible = true;
+  }
+
+  hideDropdown() {
+    this.isDropdownVisible = false;
+  }
 }

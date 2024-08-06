@@ -12,17 +12,27 @@
 <body>
   <nav class="nav">
     <div class="logo">
-      <a href="app.component.html" class="logo-mimos">
+      <a href=" " class="logo-mimos">
         <img src="assets\img\logo.png" alt="logo-mimos" class="logo-mimos">
       </a>
       <span id="logo-text" class="dancing-script-a"> Tu Centro de Belleza en Vigo</span>
     </div>
     <div class="menu">
       <ul class="nav-menu">
-        <li><a class="dancing-script-a" href="#">Inicio</a></li>
-        <li><a class="dancing-script-a" href="#">Servicios</a></li>
-        <li><a class="dancing-script-a" href="#">Sobre Nosotras</a></li>
-        <li><a class="dancing-script-a" href="#">Contacto</a></li>
+        <li><a class="dancing-script-a" href="">Inicio</a></li>
+        <li class="dropdown" (click)="showDropdown()" (mouseleave)="hideDropdown()"><a class="dancing-script-a">Servicios</a>
+          <ul class="dropdown-menu" *ngIf="isDropdownVisible">
+            <li><a href="/manicuras">Manicuras</a></li>
+            <li><a href="/pedicuras">Pedicuras</a></li>
+            <li><a href="/depilacion">Depilaciones</a></li>
+            <li><a href="/tratamientos">Tratamientos Faciales</a></li>
+            <li><a href="/pestañas">Lifting Pestañas</a></li>
+            <li><a href="/presoterapia">Presoterapia</a></li>
+            <li><a href="/maderoterapia">Maderoterapia</a></li>
+          </ul>
+        </li>
+        <li><a class="dancing-script-a" href="/nosotros">Sobre Nosotras</a></li>
+        <li><a class="dancing-script-a" href="/contacto">Contacto</a></li>
       </ul>
     </div>
     <div class="nav-redes">
@@ -34,73 +44,9 @@
       </a>
     </div>
   </nav>
-  <section class="sec-home">
-    <div class="banner-container">
-      <div class="banner-title">
-        <h1 class="dancing-script-h1">Dale a tu cuerpo los mimos que necesita <br> con nuestros tratamientos</h1>
-        <p>En nuestro centro, te ofrecemos una <strong>amplia gama de tratamientos <br> <br></strong> acompañados de productos <strong>naturales</strong> y con la mejor calidad.</p>
-        <div class="banner-btn">
-          <a class="blue-btn" target="_blank" href="">Reserva tu Cita</a>
-          <a class="blue-btn" target="_blank" href="https://api.whatsapp.com/send?phone=623324848">Contáctanos</a>
-        </div>
-      </div>
-      <div class="banner-img">
-        <img src="assets\img\banner-chica-mirando-con-mascarilla-y-serum.avif" alt="chica mirando y muestra producto facial">
-      </div>
-    </div>
-  </section>
-  <section class="sec-intro">
-    <h2 class="dancing-script-h1">Bievenidos a Mimos Beauty Center</h2>
-    <div class="intro">
-      <div class="intro-img">
-        <img class="img-centro" src="assets\img\sillones.jpg" alt="sillones pedicura">
-      </div>
-      <div class="intro-text">
-        <p class="info-intro">¡Visítanos y descubre todos nuestros servicios!</p>
-        <p class="info-intro">En Mimos podrás mimarte desde la cabeza a los pies, pues ofrecemos todo tipo de <strong>tratamientos faciales, lifting de pestañas, depilaciones, manicuras y pedicuras</strong>.</p>
-        <p class="info-intro">Pero no solo eso, ya que con nosotras encontrarás todos los tratamientos que tu cuerpo necesita como <strong>Maderoterapia y Presoterapia</strong>.</p>
-      </div>
-    </div>
-  </section>
-  <section class="sec-elegirnos">
-    <h2 id="elegirnos-title" class="dancing-script-h1">¿Por qué elegir Mimos?</h2>
-    <div class="elegirnos-grid">
-      <div class="fadeInUp">
-        <img src="assets\icons\elegirnos1.svg" alt="icono diagnostico">
-        <h3 class="dancing-script-h2">Atención Personalizada</h3>
-        <p>Cada cliente es <strong>único</strong> y en Mimos es algo que sabemos bien. <br> <br>
-          <strong>Personalizamos cada tratamiento y servicio</strong> en base a <strong>las necesidades específicas de tu cuerpo, uñas o tipo de piel</strong>. <br> <br>
-          ¡Nos encanta conoceros!
-        </p>
-      </div>
-      <div class="fadeInUp">
-        <img src="assets\icons\elegirnos2.svg" alt="icono productos">
-        <h3 class="dancing-script-h2">Productos Naturales</h3>
-        <p>Trabajamos con los mejores productos, utilizando tan solo <strong>marcas oficiales</strong> y cuya calidad y resultados no dejan lugar a duda sobre su calidad.<br> <br>
-          Todos nuestros productos <strong>son naturales y no nocivos</strong> para tu piel o uñas. <br>Es una parte muy importante para nosotras, poder ofrecer <strong>la mejor calidad</strong>
-          a las personas que nos eligen para cuidar su cuerpo.
-        </p>
-      </div>
-      <div class="fadeInUp">
-        <img src="assets\icons\elegirnos3.svg" alt="icono resultados">
-        <h3 class="dancing-script-h2">Comprometidas con tus resultados</h3>
-        <p><strong>Tu satisfacción es nuestra prioridad. <br></strong> Adaptamos nuestros tratamientos para garantizar que <strong>veas y sientas una verdadera transformación en tu cuerpo</strong>.
-          <br> <br>Pero nuestro trabajo no termina aquí, ya que en Mimos podrás <strong>contar con nosotras en cualquier momento</strong> una vez finalizado el tratamiento, para asegurar <strong>tu completa satisfacción.</strong>
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="sec-reviews">
-    <div class="review-title">
-      <h2>Experiencias que nos Inspiran</h2>
-    </div>
 
-  </section>
-  <section class="sec-doubts">
-    <h2 class="dancing-script-h1">¿Tienes alguna duda? ¡Contáctanos Directamente!</h2>
-    <p class="doubts-text">Estaremos encantadas de responder a todas tus preguntas y asegurarnos de ofrecerte el <strong>mejor servicio y experiencia posibles</strong> en Mimos Beauty Center.</p>
-    <a class="blue-btn" target="_blank" href="https://api.whatsapp.com/send?phone=623324848">Contáctanos</a>
-  </section>
+  <router-outlet></router-outlet>
+  
   <hr>
   <section class="sec-footer">
     <div class="footer-info">
@@ -114,7 +60,7 @@
         <ul class="contact-list">
           <li class="contact-item"><mat-icon>email</mat-icon>mimosvigo@gmail.com</li>
           <li class="contact-item">
-            <a target="_blank" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd2f6365b3158e35:0xf8ad9da54a916766?sa=X&ved=1t:8290&ictx=111&cshid=1720878206725507">
+            <a class="direction-footer" target="_blank" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd2f6365b3158e35:0xf8ad9da54a916766?sa=X&ved=1t:8290&ictx=111&cshid=1720878206725507">
               <mat-icon class="icon-place">place</mat-icon><span>Rúa de Jenaro de la Fuente 29, Vigo, Pontevedra</span>
             </a>
           </li>
@@ -129,5 +75,3 @@
   </section>
 </body>
 </html>
-<router-outlet></router-outlet>
- 
