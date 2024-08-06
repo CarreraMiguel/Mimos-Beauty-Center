@@ -1,5 +1,7 @@
 Landing Website for the business: "Mimos Beauty Center"
 This project is part of a job contracted by the business itself and all the code, images and content its all property of this business.
+You are free to visit it on "www.mimosvigo.com"
+
 It is build by using:
 Angular CLI: 15.2.11
 Node: 18.10.0
