@@ -1,0 +1,175 @@
+.dancing-script-h1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: xxx-large;
+  }
+
+  .dancing-script-h2 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: xx-large;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  // Inicio Seccion Banner
+
+  .contact-sec {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.contact-img {
+    object-fit: cover;
+    animation: slideInFromLeft 1.3s ease-out forwards;
+    width: 79rem;
+    height: 45rem;
+    border-radius: 4rem;
+    margin-top: 2.5rem;
+    box-shadow:  6px 4px 6px rgb(218, 190, 120);
+}
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    width: 80%;
+}
+
+  // Fin Seccion Banner
+
+  // Seccion Horarios
+
+  .container-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .horario-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(120, 206, 199);
+    padding: 1rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 4rem;
+    color: white;
+    box-shadow: 6px 4px 6px #a19892;
+    font-weight: 700;
+  }
+
+  .horario-info {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  .horario-info.visible {
+    opacity: 1;
+    animation: fadeIn 1s ease-in forwards;
+  }
+
+  .container-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin-top: 3rem;
+    margin-left: 20%;
+}
+
+.contact-data {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5rem;
+}
+
+.contact-text, .contact-rrss {
+    flex: 1 1 45%;
+    margin: 10px;
+    .dancing-script-h2{
+      text-align: center;
+    }
+}
+
+.contact-rrss{
+  margin-top: 3rem;
+}
+
+.dancing-script-h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+}
+
+.list-rrss {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+}
+
+.rrss {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+mat-icon {
+    margin-right: 10px;
+}
+
+.whatsapp-link{
+  display: flex;
+  align-items: center;
+  color: inherit; /* Hereda el color del elemento padre */
+  text-decoration: none; /* Elimina el subrayado */
+  margin-right: 0;
+}
+
+  // Fin Seccion Horarios
+
+  // Seccion Mapa
+ .map-sec{
+  text-align: center;
+ }
+
+  // Animaciones
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .map{
+   width: 1000px;
+   height: 700px;
+   border: none;
+   border-radius: 4rem;
+   box-shadow: 6px 4px 6px rgb(218, 190, 120);
+   margin-bottom: 3rem;
+  }
+  
