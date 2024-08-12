@@ -1,0 +1,227 @@
+.dancing-script-h1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: xxx-large;
+  }
+
+  .dancing-script-h2 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: xx-large;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.banner-container {
+    position: relative;
+    width: 80rem;
+    height: 50rem;
+}
+
+.img-banner {
+    margin-top: 2.5rem;
+    position: relative;
+    width: 80rem;
+    height: 50rem;
+}
+
+.img-banner img {
+    width: 80rem;
+    height: 45rem;
+    object-fit: cover;
+    position: absolute;
+    object-position: center 63%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 4rem;
+    box-shadow:  6px 4px 6px rgb(218, 190, 120);
+}
+
+.banner-text {
+    position: absolute;
+    top: 44%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    margin: 0;
+    opacity: 0;
+    animation: slideDown 1.2s forwards;
+}
+
+.banner-text hr {
+    width: 13rem;
+    border: 1px solid white;
+    margin: 10px 0;
+    animation: slideInFromLeft 1s forwards;
+}
+
+//FIN BANNER
+
+.information-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.information p{
+    margin-bottom: 3rem;
+}
+
+.blue-btn{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(120, 206, 199);
+    border-radius: 0.7rem;
+    padding: 1rem;
+  }
+  .blue-btn:hover{
+    background-color: #005f5f;
+  }
+
+//FIN INFORMACION
+
+.examples-sec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 10rem;
+}
+.example{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+.div-img img {
+    object-fit: cover;
+    object-position: left 80%;
+    height: 33rem;
+    width: 35rem;
+    display: block;
+    border-radius: 3rem;
+    box-shadow:  0 4px 6px #a19892;
+}
+
+.text {
+    text-align: center;
+    p{
+        margin-bottom: 3rem;
+    }
+}
+
+
+.text h2 {
+    text-align: center;
+}
+
+//FIN EJEMPLO IZQ
+
+.examples-secizq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.exampleizq{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    margin-left: 20rem;
+}
+
+.div-imgizq img {
+    object-fit: cover;
+    object-position: center 90%;
+    height: 33rem;
+    width: 35rem;
+    display: block;
+    border-radius: 3rem;
+    box-shadow:  0 4px 6px #a19892;
+    margin-bottom: 10rem;
+}
+
+.textizq {
+    text-align: center;
+    p{
+        margin-bottom: 3rem;
+    }
+}
+
+.textizq h2 {
+    text-align: center;
+}
+
+//Animaciones
+
+.div-img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}      
+
+.div-img.visible {
+    opacity: 1;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.div-imgizq{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}      
+
+.div-imgizq.visible {
+    opacity: 1;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule} from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { IntersectionObserverDirective } from './intersection-observer.directive';
 import { ContactComponent } from './contact/contact.component';
@@ -17,6 +18,8 @@ import { FacialComponent } from './facial/facial.component';
 import { EyelashComponent } from './eyelash/eyelash.component';
 import { PresoterapyComponent } from './presoterapy/presoterapy.component';
 import { MaderoterapyComponent } from './maderoterapy/maderoterapy.component';
+import { LegalComponent } from './legal/legal.component';
+import { PoliticaComponent } from './politica/politica.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +36,15 @@ import { MaderoterapyComponent } from './maderoterapy/maderoterapy.component';
     EyelashComponent,
     PresoterapyComponent,
     MaderoterapyComponent,
+    LegalComponent,
+    PoliticaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

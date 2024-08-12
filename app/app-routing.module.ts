@@ -10,6 +10,8 @@ import { FacialComponent } from './facial/facial.component';
 import { DepilacionComponent } from './depilacion/depilacion.component';
 import { PresoterapyComponent } from './presoterapy/presoterapy.component';
 import { MaderoterapyComponent } from './maderoterapy/maderoterapy.component';
+import { LegalComponent } from './legal/legal.component';
+import { PoliticaComponent } from './politica/politica.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +23,10 @@ const routes: Routes = [
   { path: 'tratamientos', component: FacialComponent },
   { path: 'pestañas', component: EyelashComponent },
   { path: 'presoterapia', component: PresoterapyComponent },
-  { path: 'maderoterapia', component: MaderoterapyComponent }
+  { path: 'maderoterapia', component: MaderoterapyComponent },
+  { path: 'avisolegal', component: LegalComponent },
+  { path: 'politicaprivacidad', component: PoliticaComponent },
+
 ];
 
 @NgModule({

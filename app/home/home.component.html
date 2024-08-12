@@ -4,7 +4,7 @@
         <h1 class="dancing-script-h1-banner">Dale a tu cuerpo los mimos que necesita <br> con nuestros tratamientos</h1>
         <p>En nuestro centro, te ofrecemos una <strong>amplia gama de tratamientos <br> <br></strong> acompañados de productos <strong>naturales</strong> y con la mejor calidad.</p>
         <div class="banner-btn">
-          <a class="blue-btn" target="_blank" href="">Reserva tu Cita</a>
+          <a class="blue-btn" target="_blank" href="https://mimosbeautycenter.setmore.com/">Reserva tu Cita</a>
           <a class="blue-btn" target="_blank" href="https://api.whatsapp.com/send?phone=623324848">Contáctanos</a>
         </div>
       </div>
@@ -57,7 +57,22 @@
     <div class="review-title">
       <h2 class="dancing-script-h1">Experiencias que nos Inspiran</h2>
     </div>
-
+    <section class="review-section">
+      <div class="review-container">
+        <div *ngFor="let review of visibleReviews" class="review-item">
+          <p class="author">{{ review.author }}</p>
+          <img [src]="review.imageUrl" alt="estrellas google">
+          <p>{{ review.text }}</p>
+        </div>
+      </div>
+      <div class="buttons-div">
+        <button class="review-buttons" (click)="showPrevReviews()"><</button>
+        <button class="review-buttons" (click)="showNextReviews()">></button>
+      </div>
+      <div class="more-reviews">
+        <a class="blue-btn" target="_blank" (click)="moreReviews()">Descúbrelas</a>
+      </div>
+    </section>
   </section>
   <section class="sec-doubts">
     <h2 class="dancing-script-h1">¿Tienes alguna duda? ¡Contáctanos Directamente!</h2>

@@ -66,10 +66,24 @@
   }
   
   .menu {
+    display: flex;
+    text-align: center;
     flex: 2; /* Hace que el menú ocupe el doble de espacio que .logo */
     text-align: left; /* Centra el texto del menú horizontalmente */
     padding: 0.5rem;
     margin-left: 6rem;
+  }
+
+  .dancing-script-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon{
+      font-size: 2rem;
+      margin-right: 0.5rem;
+      padding-right: 0.4rem;
+      padding-bottom: 0.32rem;
+    }
   }
 
   .nav-menu li {
@@ -152,12 +166,7 @@
   .logo-redes {
     width: 3rem; /* Ajusta el ancho de los iconos de redes sociales */
     height: 3rem; /* Ajusta la altura de los iconos de redes sociales */
-    padding: 1rem;
-  }
-  .logo-redes:hover {
-    width: 3.3rem; /* Ajusta el ancho de los iconos de redes sociales */
-    height: 3.3rem; /* Ajusta la altura de los iconos de redes sociales */
-    transition: 1s;
+    margin: 1.8rem;
   }
 
   // Final seccion NAV
@@ -193,8 +202,7 @@
     padding: 1rem;
   }
   .blue-btn:hover{
-    opacity: 0.7;
-    transition: 0.8s;
+    background-color: #005f5f;
   }
 // Final Seccion Banner
 
@@ -328,6 +336,20 @@
     }
   }
 
+  .privacity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.1rem;
+    text-align: left;
+    gap: 2rem;
+    a{
+      color: black;
+    }
+
+  }
+
   .direction-footer,
   .direction-footer span {
     font-weight: normal;
@@ -378,34 +400,25 @@
   animation: fadeIn 1s ease-in forwards;
 }
 
-.elegirnos1{
+.elegirnos {
   opacity: 0;
   transition: opacity 1s ease-in;
 }
 
-.elegirnos1.visible{
+.elegirnos.visible {
   opacity: 1;
-  animation: fadeIn 0.5s ease-in forwards;
 }
 
-.elegirnos2{
-  opacity: 0;
-  transition: opacity 1s ease-in;
-}
-
-.elegirnos2.visible{
-  opacity: 1;
+.elegirnos.visible:nth-child(1) {
   animation: fadeIn 1s ease-in forwards;
 }
 
-.elegirnos3{
-  opacity: 0;
-  transition: opacity 1.2s ease-in;
+.elegirnos.visible:nth-child(2) {
+  animation: fadeIn 1.5s ease-in forwards;
 }
 
-.elegirnos3.visible{
-  opacity: 1;
-  animation: fadeIn 1.6s ease-in forwards;
+.elegirnos.visible:nth-child(3) {
+  animation: fadeIn 2s ease-in forwards;
 }
 
 //PRUEBA DESPLEGABLE
