@@ -144,6 +144,7 @@
     font-weight: 800;
     font-size: 1.65rem;
     padding: 0.4rem;
+    border-radius: 1rem;
   }
   span{
       color: black;
@@ -153,7 +154,7 @@
   }
   .dancing-script-a:hover{
     background-color: rgb(120, 206, 199);
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: 0.5s;
   }
   
@@ -426,8 +427,8 @@
 .menu {
   position: sticky;
   top: 0;
-  background-color: #fff; /* Fondo del menú sticky */
-  z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+  background-color: #fff;
+  z-index: 1000;
 }
 
 /* Estilos para el menú principal */
@@ -440,29 +441,29 @@
 
 .nav-menu li {
   position: relative;
-  margin-right: 20px; /* Ajusta el margen entre los elementos del menú según tus necesidades */
+  margin-right: 20px;
 }
 
 .dropdown-menu {
-  display: none; /* Ocultar el submenú por defecto */
+  display: none;
   position: absolute;
   width: 10rem;
   margin: auto;
-  top: 100%; /* Posiciona el submenú justo debajo del ítem principal */
-  left: 50%; /* Centra el submenú horizontalmente en relación con el ítem principal */
-  transform: translateX(-50%); /* Ajusta el centro del submenú en relación con el ítem principal */
-  background-color: #fff; /* Color de fondo del submenú */
-  border: 1px solid rgb(218, 190, 120); /* Borde del submenú */
-  border-radius: 1rem; /* Bordes redondeados para un estilo de globito */
-  padding: 1rem; /* Espaciado interno del submenú */
-  box-shadow: 0 4px 6px rgb(218, 190, 120); /* Sombra para dar un efecto de elevación */
-  z-index: 1000; /* Asegura que el submenú aparezca por encima de otros elementos */
+  top: 100%;
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: #fff;
+  border: 1px solid rgb(218, 190, 120);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgb(218, 190, 120);
+  z-index: 1000;
 }
 
 .dropdown-menu a {
   padding: 10px;
-  color: #000; /* Color del texto del submenú */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #000;
+  text-decoration: none;
   display: block;
 }
 .dropdown-menu a:hover {
@@ -473,4 +474,152 @@
 .dropdown:hover .dropdown-menu,
 .dropdown .dropdown-menu {
   display: block;
+}
+
+/* Media Query para móviles */
+@media screen and (max-width: 768px) {
+  
+  /* Ajustes generales */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Navegación */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .logo-mimos {
+    width: 10rem;
+    height: 6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .dancing-script-a {
+    font-size: 1.2rem;
+  }
+
+  .nav-redes {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .logo-redes {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+  }
+
+  /* Banner */
+  .banner-container {
+    flex-direction: column;
+    padding: 5rem 2rem;
+  }
+
+  .banner-btn {
+    margin-left: 0;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .blue-btn {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  /* Sección Intro */
+  .sec-intro .intro {
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .img-centro {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .intro-text {
+    margin-right: 0;
+  }
+
+  /* Sección Elegirnos */
+  #elegirnos-title {
+    margin-left: 0;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+  }
+
+  .elegirnos-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  /* Sección Dudas */
+  .sec-doubts {
+    padding: 3rem 1rem;
+  }
+
+  /* Sección Footer */
+  .sec-footer {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .footer-info {
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  .logo-footer {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .img-footer {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-list {
+    align-items: center;
+  }
+
+  .contact-item {
+    padding: 0.5rem 0;
+    justify-content: center;
+  }
+
+  .privacity {
+    padding: 1rem 0;
+    gap: 1rem;
+  }
 }

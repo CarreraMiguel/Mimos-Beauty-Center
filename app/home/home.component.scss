@@ -43,7 +43,7 @@
   }
   .banner-btn{
     display: flex;
-    justify-content: first baseline;
+    justify-content: center;
     align-items: first baseline;
     margin-top: 3rem;
     margin-left: 40%;
@@ -79,7 +79,7 @@
         border-radius: 3rem;
         box-shadow: 0 4px 6px #a19892;
         margin-left: 16.5rem;
-        background-size: 100% 100%;
+        background-size: cover;
         animation: slider 22s linear forwards;
       }
     }
@@ -99,17 +99,17 @@
     // Inicio Seccion Elegirnos
 
     #elegirnos-title{
-      margin-left: 40%;
-      margin-top: 8rem;
+    text-align: center;
+    margin: 4rem auto;
     }
 
 
     .elegirnos-grid{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
       text-align: center;
-      padding: 3rem 6rem 6rem 6rem;
-      gap: 5rem;
+      padding: 3rem 1rem;
+      gap: 2rem;
     }
 
     // Final Seccion Elegirnos
@@ -128,6 +128,7 @@
 
     .review-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -136,25 +137,25 @@
     }
     
     .review-item {
-      flex: 0 1 30%; /* Hace que las tarjetas ocupen un 30% del contenedor, permitiendo flexibilidad */
-      max-width: 20rem; /* Tamaño máximo de la tarjeta */
-      min-width: 20rem; /* Tamaño mínimo de la tarjeta */
+      flex: 0 1 30%;
+      max-width: 20rem;
+      min-width: 20rem;
       background-color: #fff;
       border: 1px solid rgb(218, 190, 120);
       border-radius: 2rem;
       box-shadow: 0 4px 6px rgb(218, 190, 120);
       padding: 1.5rem;
-      box-sizing: border-box; /* Incluye el padding en el tamaño total de la tarjeta */
-      overflow: hidden; /* Evita que el contenido se desborde de la tarjeta */
-      text-align: left; /* Texto alineado a la izquierda dentro de la tarjeta */
-      height: 28rem; /* Altura fija de la tarjeta */
+      box-sizing: border-box;
+      overflow: hidden;
+      text-align: left;
+      height: 28rem;
     }
     
     .review-item p {
       margin: 0.5rem 0;
-      overflow: hidden; /* Si el texto es demasiado largo, ocúltalo */
-      text-overflow: ellipsis; /* Añade puntos suspensivos al texto demasiado largo */
-      display: -webkit-box; /* Compatibilidad con líneas múltiples en texto */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
       -webkit-line-clamp: 10;
       -webkit-box-orient: vertical;
     }
@@ -216,7 +217,7 @@
     .button-container {
       display: flex;
       justify-content: center;
-      gap: 2rem; /* Espaciado entre los botones */
+      gap: 2rem;
       margin-top: 1rem;
     }
     //Final Seccion Reseñas
@@ -257,7 +258,8 @@
   }
   .footer-info{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    gap: 2rem;
     padding: 3rem;
   }
   .logo-footer{
@@ -401,4 +403,228 @@
 .elegirnos3.visible{
   opacity: 1;
   animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  /* Ajustes para tabletas */
+  .banner-container {
+      padding: 3rem;
+  }
+
+  .sec-intro .intro {
+      flex-direction: row;
+  }
+
+  .intro-img {
+      width: 50%;
+  }
+
+  .intro-text {
+      margin-right: 10%;
+  }
+
+  .elegirnos-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .review-container {
+      flex-direction: row;
+  }
+
+  .footer-info {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Ajustes para pantallas grandes */
+  .banner-container {
+      padding: 5rem;
+  }
+
+  .sec-intro .intro {
+      flex-direction: row;
+  }
+
+  .intro-img {
+      width: 50%;
+  }
+
+  .intro-text {
+      margin-right: 15%;
+  }
+
+  .elegirnos-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .review-container {
+      flex-direction: row;
+  }
+
+  .footer-info {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media Query para pantallas móviles */
+@media screen and (max-width: 768px) {
+
+  /* Ajustes generales de fuentes y márgenes */
+  .dancing-script-h1, 
+  .dancing-script-h2, 
+  .dancing-script-h1-banner {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .dancing-script-a {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  hr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  /* Sección Banner */
+  .banner-container {
+    padding: 1.5rem;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .banner-btn {
+    margin: 2rem auto;
+    gap: 1rem;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .blue-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Sección Intro */
+  .sec-intro {
+    h2 {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .intro {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .intro-img {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      border-radius: 1rem;
+    }
+
+    .intro-text {
+      margin-right: 0;
+      text-align: justify;
+    }
+  }
+
+  /* Sección Elegirnos */
+  #elegirnos-title {
+    margin: 2rem auto;
+    font-size: 1.5rem;
+  }
+
+  .elegirnos-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  /* Sección Reseñas */
+  .sec-reviews {
+    padding: 2rem 1rem;
+  }
+
+  .review-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .review-item {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .review-buttons {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .buttons-div {
+    flex-direction: column;
+  }
+
+  /* Sección Dudas */
+  .sec-doubts {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .blue-btn {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  /* Sección Footer */
+  .sec-footer {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    padding: 2rem 1rem;
+  }
+
+  .logo-footer {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .img-footer {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-list {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  /* Animaciones e imágenes */
+  .intro-img.visible,
+  .elegirnos1.visible,
+  .elegirnos2.visible,
+  .elegirnos3.visible {
+    animation: fadeIn 0.8s ease-in forwards;
+  }
+
+  .carousel-navigation {
+    display: none;
+  }
+
+  .more-reviews {
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }

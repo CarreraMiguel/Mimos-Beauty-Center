@@ -169,3 +169,108 @@ section{
     }
   }
 
+/* Media Query para pantallas móviles */
+@media screen and (max-width: 768px) {
+
+  /* Ajustes generales de fuentes y márgenes */
+  .dancing-script-h1,
+  .dancing-script-h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 5rem;
+  }
+
+  /* Sección Banner */
+  .sec-banner {
+    position: relative;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-img {
+    width: 90%;
+    height: auto;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+    box-shadow: 6px 4px 6px rgb(218, 190, 120);
+  }
+
+  .banner-text {
+    position: static;
+    width: auto;
+    margin: 1rem auto;
+    transform: none;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .banner-text hr {
+    margin: 1rem auto;
+    width: 50%;
+  }
+
+  /* Sección Sobre Nosotras */
+  .sec-nosotras {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .nosotras {
+    padding: 1.5rem;
+  }
+
+  .nosotras p {
+    font-size: 1rem;
+  }
+
+  /* Sección Nuestra Visión */
+  .elegirnos-vision {
+    margin: auto;
+  }
+
+  .mision,
+  .vision,
+  .valores {
+    flex-direction: column;
+    margin: 0 2rem;
+    margin-bottom: 5rem;
+    gap: 2rem;
+  }
+
+  .text,
+  .text-reverse,
+  .text3 {
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Ajustes de animaciones para móviles */
+  .mision-img.visible,
+  .vision-img.visible,
+  .valores-img.visible {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+
+  .text.visible,
+  .text-reverse.visible,
+  .text3.visible {
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+}

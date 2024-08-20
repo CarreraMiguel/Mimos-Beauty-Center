@@ -51,7 +51,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
     border-radius: 4rem;
     box-shadow:  6px 4px 6px rgb(218, 190, 120);
 }
@@ -221,5 +220,98 @@
     100% {
       transform: translateX(0);
       opacity: 1;
+    }
+  }
+
+  /* Media Query para móviles */
+@media (max-width: 768px) {
+    /* Estilos para el banner */
+    .banner {
+        height: auto;
+        margin-bottom: 2rem;
+    }
+  
+    .banner-container,
+    .img-banner {
+        width: 100%;
+        height: auto;
+    }
+  
+    .img-banner img {
+        width: 100%;
+        height: auto;
+        border-radius: 2rem;
+        box-shadow: none;
+    }
+  
+    .banner-text {
+        top: 30%;
+        left: 5%;
+        transform: translateY(-50%);
+    }
+  
+    .banner-text h1 {
+        font-size: 2em;
+    }
+  
+    .banner-text hr {
+        width: 8rem;
+        margin: 5px 0;
+    }
+  
+    /* Estilos para la sección de información */
+    .information-sec {
+        flex-direction: column;
+        margin-bottom: 4rem;
+    }
+  
+    .information p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+  
+    .blue-btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+    }
+  
+    /* Estilos para las secciones de ejemplos */
+    .examples-sec, 
+    .examples-secizq {
+        flex-direction: column;
+        padding: 1rem;
+        margin-bottom: 5rem;
+    }
+  
+    .example, 
+    .exampleizq {
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0;
+    }
+  
+    .div-img img,
+    .div-imgizq img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: none;
+        margin-bottom: 2rem;
+    }
+  
+    .text,
+    .textizq {
+        text-align: center;
+    }
+  
+    .text h2,
+    .textizq h2 {
+        font-size: 1.8em;
+    }
+  
+    .text p,
+    .textizq p {
+        font-size: 1rem;
     }
   }
