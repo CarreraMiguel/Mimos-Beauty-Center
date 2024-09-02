@@ -224,41 +224,224 @@
     }
   }
 
-  /* Media Query para móviles */
-@media (max-width: 768px) {
+  @media (min-width: 769px) and (max-width: 1024px) {
     /* Estilos para el banner */
     .banner {
-        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        width: 90%;
+        height: 25rem;
+        overflow: hidden;
         margin-bottom: 2rem;
+        margin-top: 2rem;
+        margin-left: 5%;
+        z-index: 2;
+        border-radius: 2rem;
+        box-shadow: 4px 4px 6px rgb(218, 190, 120);
     }
-  
-    .banner-container,
-    .img-banner {
+
+    .banner-container {
+        position: relative;
         width: 100%;
         height: auto;
     }
-  
+
+    .img-banner {
+        margin-top: 1rem;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
     .img-banner img {
         width: 100%;
         height: auto;
-        border-radius: 2rem;
-        box-shadow: none;
+        object-fit: cover;
+        position: relative;
     }
-  
+
     .banner-text {
-        top: 30%;
-        left: 5%;
-        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        width: 90%;
     }
-  
+
     .banner-text h1 {
-        font-size: 2em;
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.2em;
+        margin: 0;
+        opacity: 1;
+        animation: slideDown 1.2s forwards;
+    }
+
+    .banner-text hr {
+        width: 5rem;
+        border: 1px solid white;
+        margin: 1rem auto;
+        animation: slideInFromLeft 1s forwards;
+    }
+
+    .banner-text p {
+        font-size: 1.1rem;
+        margin-top: 1rem;
     }
   
-    .banner-text hr {
-        width: 8rem;
-        margin: 5px 0;
+    /* Estilos para la sección de información */
+    .information-sec {
+        flex-direction: column;
+        margin-bottom: 3rem;
     }
+  
+    .information p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        padding: 2rem;
+    }
+  
+    .blue-btn {
+        padding: 0.7rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+    }
+  
+    /* Estilos para las secciones de ejemplos */
+    .examples-sec, 
+    .examples-secizq {
+        flex-direction: column;
+        padding: 1rem;
+        margin-bottom: 4rem;
+    }
+  
+    .example, 
+    .exampleizq {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 2%;
+    }
+  
+    .div-img img,
+    .div-imgizq img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 9%;
+        width: 80%;
+        height: auto;
+        border-radius: 3rem;
+        box-shadow: none;
+        margin-bottom: 1.5rem;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+  
+    .text,
+    .textizq {
+        text-align: center;
+    }
+  
+    .text h2,
+    .textizq h2 {
+        font-size: 2.2rem;
+    }
+  
+    .text p,
+    .textizq p {
+        font-size: 1.3rem;
+    }
+
+    .example, .exampleizq {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div-img, .div-imgizq {
+        order: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .text, .textizq {
+        order: 1;
+    }
+}
+
+  /* Media Query para móviles */
+@media (max-width: 768px) {
+/* Estilos para el banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 95%;
+    height: 25rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    margin: 0.5rem;
+    box-shadow:  6px 4px 6px rgb(218, 190, 120);
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.img-banner {
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.img-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 90%;
+}
+
+.banner-text h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    margin: 0;
+    opacity: 1;
+    animation: slideDown 1.2s forwards;
+}
+
+.banner-text hr {
+    width: 11rem;
+    border: 1px solid white;
+    margin: 1rem auto;
+    animation: slideInFromLeft 1s forwards;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
   
     /* Estilos para la sección de información */
     .information-sec {
@@ -289,7 +472,7 @@
     .exampleizq {
         flex-direction: column;
         gap: 2rem;
-        margin: 0;
+        margin: 3%;
     }
   
     .div-img img,
@@ -314,5 +497,18 @@
     .text p,
     .textizq p {
         font-size: 1rem;
+    }
+
+    .example, .exampleizq {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div-img, .div-imgizq {
+        order: 0;
+    }
+
+    .text, .textizq {
+        order: 1;
     }
   }

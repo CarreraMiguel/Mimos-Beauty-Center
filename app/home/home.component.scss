@@ -1,338 +1,435 @@
-
 .dancing-script-h1 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: xxx-large;
+}
+
+.dancing-script-h2 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: xx-large;
+}
+
+.dancing-script-a {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+p {
+  font-size: 1.3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.sec-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5rem 1rem;
+  margin: 0 auto;
+}
+
+.banner-title {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+  .dancing-script-h1-banner{
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
     font-size: xxx-large;
+    animation: slideInFromLeft 1s linear forwards
+  }
+}
+
+.banner-img img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.banner-btn {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  margin-top: 3rem;
+  gap: 1.5rem;
+}
+
+.blue-btn {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(120, 206, 199);
+  border-radius: 0.7rem;
+  padding: 1rem;
+  width: auto;
+  max-width: 200px;
+}
+
+.blue-btn:hover {
+  background-color: #005f5f;
+}
+
+// Sección Intro
+.sec-intro {
+  h2 {
+    text-align: center;
+    margin: 2rem 0;
   }
 
-  .dancing-script-h2 {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: xx-large;
+  .intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
   }
 
-  .dancing-script-a {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  p{
-    font-size: 1.3rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  .intro-img {
+    width: 100%;
+    max-width: 600px;
+    height: 35rem;
+    border-radius: 3rem;
+    box-shadow: 0 4px 6px #a19892;
+    margin-left: 15%;
+    display: flex;
+    animation: slider 22s linear forwards;
+    background-size: cover;
   }
 
-  // Inicio Seccion Banner
+  .intro-text {
+    margin: 0;
+    max-width: 600px;
+    margin-right: 15%;
+  }
+}
+
+// Sección Elegirnos
+#elegirnos-title {
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.elegirnos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  text-align: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+// Sección Reseñas
+.sec-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.review-item {
+  flex: 1 1 20rem;
+  max-width: 20rem;
+  min-width: 20rem;
+  height: 28rem;
+  background-color: #fff;
+  border: 1px solid rgb(218, 190, 120);
+  border-radius: 2rem;
+  box-shadow: 0 4px 6px rgb(218, 190, 120);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: left;
+}
+
+.review-item p {
+  margin: 0.5rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
+
+.review-item img {
+  width: 100px;
+  height: auto;
+  margin: 10px auto;
+}
+
+.review-item p.author {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.carousel-navigation {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-buttons {
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: rgb(120, 206, 199);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  margin-top: 1.5rem;
+  margin: 0.5rem;
+  max-width: 150px;
+  width: auto;
+}
+
+.review-buttons:hover {
+  background-color: #005f5f;
+}
+
+.more-reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+// Alineación de los botones en el centro
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+// Sección Dudas
+.sec-doubts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.sec-doubts .blue-btn {
+  margin-top: 3rem;
+  align-self: center;
+  padding: 1rem;
+  max-width: 200px;
+}
+
+hr {
+  margin: 1rem 8rem;
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    background-image: none;
+  }
+
   .sec-home {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .banner-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 5rem;
-    margin: 0 auto;
-  }
-  .banner-btn{
-    display: flex;
-    justify-content: center;
-    align-items: first baseline;
-    margin-top: 3rem;
-    margin-left: 40%;
-    gap: 1.5rem;
+    padding: 0;
+
+    p {
+      text-align: center;
+      margin: 0;
+    }
   }
 
-  .blue-btn{
+  .banner-container {
+    height: 40rem;
+    padding: 1px;
+    overflow: hidden;
+    max-width: 100vw;
+
+    .banner-img {
+      display: none;
+    }
+
+    .dancing-script-h1-banner {
+      text-align: center;
+    }
+
+    .banner-title {
+      padding: 0;
+    }
+  }
+
+  .banner-btn {
+    margin-top: 2rem;
+    margin-left: 0;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .blue-btn {
     text-decoration: none;
     color: white;
     background-color: rgb(120, 206, 199);
     border-radius: 0.7rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
   }
-  .blue-btn:hover{
+
+  .blue-btn:hover {
     background-color: #005f5f;
   }
-// Final Seccion Banner
-
-// Comienza Seccion Intro
 
   .sec-intro {
-    h2{
-      margin-left: 59rem;
+    h2 {
+      display: none;
     }
-    .intro {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 4vw;
-      .intro-img{
-        width: 73rem;
-        height: 37rem;
-        border-radius: 3rem;
-        box-shadow: 0 4px 6px #a19892;
-        margin-left: 16.5rem;
-        background-size: cover;
-        animation: slider 22s linear forwards;
-      }
-    }
-  
-      .intro-text {
-        margin-bottom: 8rem;
-        margin-right: 15%;
-  
-        .info-intro {
-          margin-bottom: 15px;
-        }
-      }
-    }
+  }
 
-    // Final Seccion Intro
-
-    // Inicio Seccion Elegirnos
-
-    #elegirnos-title{
-    text-align: center;
-    margin: 4rem auto;
-    }
-
-
-    .elegirnos-grid{
-      display: grid;
-      grid-template-columns: 1fr;
-      text-align: center;
-      padding: 3rem 1rem;
-      gap: 2rem;
-    }
-
-    // Final Seccion Elegirnos
-
-    // Inicio Seccion Reseñas
-
-    .sec-reviews{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .review-title{
-      text-align: center;
-    }
-
-    .review-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      gap: 5rem;
-      padding: 2rem;
-    }
-    
-    .review-item {
-      flex: 0 1 30%;
-      max-width: 20rem;
-      min-width: 20rem;
-      background-color: #fff;
-      border: 1px solid rgb(218, 190, 120);
-      border-radius: 2rem;
-      box-shadow: 0 4px 6px rgb(218, 190, 120);
-      padding: 1.5rem;
-      box-sizing: border-box;
-      overflow: hidden;
-      text-align: left;
-      height: 28rem;
-    }
-    
-    .review-item p {
-      margin: 0.5rem 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 10;
-      -webkit-box-orient: vertical;
-    }
-    
-    .review-item img {
-      width: 100px;
-      height: auto;
-      margin: 10px auto;
-    }
-
-    
-    .review-item p.author {
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-
-    .carousel-navigation {
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .buttons-div{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .review-buttons {
-      font-weight: bold;
-      font-size: 1rem;
-      background-color: rgb(120, 206, 199);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 0.7rem;
-      margin-top: 1.5rem;
-      margin: 0.5rem;
-    }
-    
-    .review-buttons:hover {
-      background-color: #005f5f;
-    }
-
-    .more-reviews{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    
-    /* Alineación de los botones en el centro */
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    //Final Seccion Reseñas
-
-    // Inicio Seccion Dudas
-
-  .sec-doubts{
+  .intro {
     display: flex;
     flex-direction: column;
-    align-items: column;
-    justify-content: column;
-    text-align: center;
-    margin: auto;
-    padding: 5rem;
-    
-      .blue-btn{
-        margin-top: 3rem;
-        align-self: center;
-        padding: 1rem;
-      }
-  }
-
-  // Final Seccion Dudas
-
-  hr{
-    margin-left: 8rem;
-    margin-right: 8rem;
-  }
-
-  // Inicio Seccion Footer
-
-  .sec-footer{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
     justify-content: center;
     align-items: center;
-  }
-  .footer-info{
-    display: grid;
-    grid-template-columns: 1fr;
+    margin-left: 0;
     gap: 2rem;
+    
+    .intro-text{
+      margin-right: 0;
+    }
+
+    .info-intro-1 {
+      display: none;
+    }
+  }
+
+  .intro-img {
+    display: none !important;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    margin-left: 0;
+    font-size: 0.5rem;
+  }
+
+  .intro-text {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .sec-elegirnos {
     padding: 3rem;
   }
-  .logo-footer{
-    align-items: center;
+
+  #elegirnos-title {
+    margin: 3rem auto;
+    text-align: center;
+  }
+
+  .elegirnos-grid {
+    grid-template-columns: 1fr;
     padding: 1rem;
-    margin-right: 8rem;
-    
-    .img-footer{
-      width: 18rem;
-      height: 10rem;
-    }
+    gap: 2rem;
   }
 
-  .contact-title{
-    text-decoration: underline 1px gray;
-    align-self: center;
+  .review-item{
+    height: 20rem;
   }
 
-  .contact-list{
+  .review-item p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+  }
+
+  .sec-doubts {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: start;
-    text-decoration: none;
-    list-style: none;
-
-    .contact-item{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.7rem;
-      text-decoration: none;
-      gap: 0.5rem;
-      span{
-        font-size: medium;
-        text-decoration: none;
-      }
-      .icon-place{
-        color: black;
-      }
-    }
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-
-  // Estilos para las animaciones
-
-  //Animacion Fotos Cambiantes
-  @keyframes slider {
-    0% {
-      background-image: url('/assets/img/calle.jpeg');
-    }
-    20% {
-      background-image: url('/assets/img/calle.jpeg');
-    }
-    30% {
-      background-image: url('/assets/img/entrada.jpeg');
-    }
-    45% {
-      background-image: url('/assets/img/entrada.jpeg');
-    }
-    55% {
-      background-image: url('/assets/img/cabina.jpg');
-    }
-    70% {
-      background-image: url('/assets/img/cabina.jpg');
-    }
-    85% {
-      background-image: url('/assets/img/maquillaje.jpg');
-    }
-    100% {
-      background-image: url('/assets/img/sillones.jpg');
-    }
+  /* Evitar afectar el carrusel de fotos */
+  .intro-carousel {
+    display: block;
   }
+}
+
+// Estilos para las animaciones
+//Animacion Fotos Cambiantes
+@keyframes slider {
+  0% {
+    background-image: url("/assets/img/calle.jpeg");
+  }
+  20% {
+    background-image: url("/assets/img/calle.jpeg");
+  }
+  30% {
+    background-image: url("/assets/img/entrada.jpeg");
+  }
+  45% {
+    background-image: url("/assets/img/entrada.jpeg");
+  }
+  55% {
+    background-image: url("/assets/img/cabina.jpg");
+  }
+  70% {
+    background-image: url("/assets/img/cabina.jpg");
+  }
+  85% {
+    background-image: url("/assets/img/maquillaje.jpg");
+  }
+  100% {
+    background-image: url("/assets/img/sillones.jpg");
+  }
+}
 
 @keyframes slideInFromLeft {
   0% {
@@ -343,15 +440,6 @@
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-.dancing-script-h1-banner {
-  animation: slideInFromLeft 1.2s ease-out forwards;
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-size: xxx-large;
 }
 
 // Imagen Apareciendo
@@ -365,266 +453,42 @@
   }
 }
 
- .intro-img {
-   opacity: 0;
-   transition: opacity 1s ease-in;
- }
-
- .intro-img.visible {
-   opacity: 1;
-   animation: fadeIn 1s ease-in forwards;
- }
-
-.elegirnos1{
+.intro-img {
   opacity: 0;
   transition: opacity 1s ease-in;
 }
 
-.elegirnos1.visible{
-  opacity: 1;
-  animation: fadeIn 0.5s ease-in forwards;
-}
-
-.elegirnos2{
-  opacity: 0;
-  transition: opacity 1s ease-in;
-}
-
-.elegirnos2.visible{
+.intro-img.visible {
   opacity: 1;
   animation: fadeIn 1s ease-in forwards;
 }
 
-.elegirnos3{
+.elegirnos1 {
   opacity: 0;
-  transition: opacity 1.2s ease-in;
+  transition: opacity 1s ease-in;
 }
 
-.elegirnos3.visible{
+.elegirnos1.visible {
+  opacity: 1;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.elegirnos2 {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.elegirnos2.visible {
   opacity: 1;
   animation: fadeIn 1.5s ease-in forwards;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
-  /* Ajustes para tabletas */
-  .banner-container {
-      padding: 3rem;
-  }
-
-  .sec-intro .intro {
-      flex-direction: row;
-  }
-
-  .intro-img {
-      width: 50%;
-  }
-
-  .intro-text {
-      margin-right: 10%;
-  }
-
-  .elegirnos-grid {
-      grid-template-columns: repeat(2, 1fr);
-  }
-
-  .review-container {
-      flex-direction: row;
-  }
-
-  .footer-info {
-      grid-template-columns: repeat(3, 1fr);
-  }
+.elegirnos3 {
+  opacity: 0;
+  transition: opacity 1s ease-in;
 }
 
-@media (min-width: 1024px) {
-  /* Ajustes para pantallas grandes */
-  .banner-container {
-      padding: 5rem;
-  }
-
-  .sec-intro .intro {
-      flex-direction: row;
-  }
-
-  .intro-img {
-      width: 50%;
-  }
-
-  .intro-text {
-      margin-right: 15%;
-  }
-
-  .elegirnos-grid {
-      grid-template-columns: repeat(3, 1fr);
-  }
-
-  .review-container {
-      flex-direction: row;
-  }
-
-  .footer-info {
-      grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Media Query para pantallas móviles */
-@media screen and (max-width: 768px) {
-
-  /* Ajustes generales de fuentes y márgenes */
-  .dancing-script-h1, 
-  .dancing-script-h2, 
-  .dancing-script-h1-banner {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .dancing-script-a {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  hr {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  /* Sección Banner */
-  .banner-container {
-    padding: 1.5rem;
-    margin: 0 auto;
-    flex-direction: column;
-  }
-
-  .banner-btn {
-    margin: 2rem auto;
-    gap: 1rem;
-    flex-direction: column;
-    margin-left: 0;
-  }
-
-  .blue-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Sección Intro */
-  .sec-intro {
-    h2 {
-      margin-left: 0;
-      text-align: center;
-    }
-
-    .intro {
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .intro-img {
-      width: 100%;
-      height: auto;
-      margin-left: 0;
-      border-radius: 1rem;
-    }
-
-    .intro-text {
-      margin-right: 0;
-      text-align: justify;
-    }
-  }
-
-  /* Sección Elegirnos */
-  #elegirnos-title {
-    margin: 2rem auto;
-    font-size: 1.5rem;
-  }
-
-  .elegirnos-grid {
-    grid-template-columns: 1fr;
-    padding: 2rem 1rem;
-  }
-
-  /* Sección Reseñas */
-  .sec-reviews {
-    padding: 2rem 1rem;
-  }
-
-  .review-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .review-item {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .review-buttons {
-    width: 100%;
-    padding: 0.5rem;
-  }
-
-  .buttons-div {
-    flex-direction: column;
-  }
-
-  /* Sección Dudas */
-  .sec-doubts {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .blue-btn {
-    width: 100%;
-    padding: 0.8rem;
-  }
-
-  /* Sección Footer */
-  .sec-footer {
-    flex-direction: column;
-  }
-
-  .footer-info {
-    padding: 2rem 1rem;
-  }
-
-  .logo-footer {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-
-  .img-footer {
-    width: 100%;
-    height: auto;
-  }
-
-  .contact-list {
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-item {
-    justify-content: center;
-  }
-
-  /* Animaciones e imágenes */
-  .intro-img.visible,
-  .elegirnos1.visible,
-  .elegirnos2.visible,
-  .elegirnos3.visible {
-    animation: fadeIn 0.8s ease-in forwards;
-  }
-
-  .carousel-navigation {
-    display: none;
-  }
-
-  .more-reviews {
-    justify-content: center;
-    margin-top: 2rem;
-  }
+.elegirnos3.visible {
+  opacity: 1;
+  animation: fadeIn 2s ease-in forwards;
 }
