@@ -20,6 +20,7 @@ import { PresoterapyComponent } from './presoterapy/presoterapy.component';
 import { MaderoterapyComponent } from './maderoterapy/maderoterapy.component';
 import { LegalComponent } from './legal/legal.component';
 import { PoliticaComponent } from './politica/politica.component';
+import { RadiofrequencyComponent } from './radiofrequency/radiofrequency.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PoliticaComponent } from './politica/politica.component';
     MaderoterapyComponent,
     LegalComponent,
     PoliticaComponent,
+    RadiofrequencyComponent,
   ],
   imports: [
     BrowserModule,
